@@ -640,7 +640,6 @@ footer{
 
 <body>
 
-<!-- LOADER -->
 <div id="loader">
     <div class="loader-box">
         <div class="loader-ring"></div>
@@ -650,7 +649,6 @@ footer{
     </div>
 </div>
 
-<!-- HEADER -->
 <header>
     <div class="container nav">
 
@@ -675,7 +673,6 @@ footer{
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
 
     <span class="particle p1"></span>
@@ -740,7 +737,6 @@ footer{
     </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 
     <div class="container">
@@ -765,6 +761,24 @@ footer{
         <div class="grid">
 
             <div class="card reveal">
+                <div class="icon">🎨</div>
+                <h3>Graphic Design Services</h3>
+                <p>
+                    Logos, Banners, Social Media Posts, Branding, and Full Graphic Solutions.
+                </p>
+                <span class="tag">Creative</span>
+            </div>
+
+            <div class="card reveal">
+                <div class="icon">⚖️</div>
+                <h3>Adv. Sameer Bhalekar</h3>
+                <p>
+                    Legal Consultancy, Legal Advice, Documentation, and Legal Assistance.
+                </p>
+                <span class="tag">Legal Advice</span>
+            </div>
+
+            <div class="card reveal">
                 <div class="icon">⚡</div>
                 <h3>Meter Name Transfer</h3>
                 <p>
@@ -773,224 +787,3 @@ footer{
                 </p>
                 <span class="tag">₹700 onwards</span>
             </div>
-
-            <div class="card reveal">
-                <div class="icon">🏠</div>
-                <h3>Property & Builder</h3>
-                <p>
-                    7/12, 8A, NOC, Society and
-                    related work assistance.
-                </p>
-                <span class="tag">Trusted</span>
-            </div>
-
-            <div class="card reveal">
-                <div class="icon">📄</div>
-                <h3>PAN Services</h3>
-                <p>
-                    New PAN, correction and
-                    reprint assistance.
-                </p>
-                <span class="tag">Same Day</span>
-            </div>
-
-            <div class="card reveal">
-                <div class="icon">🚗</div>
-                <h3>RTO Services</h3>
-                <p>
-                    License, RC Transfer, PUC
-                    and related RTO assistance.
-                </p>
-                <span class="tag">All MH</span>
-            </div>
-
-            <div class="card reveal">
-                <div class="icon">📝</div>
-                <h3>Online Applications</h3>
-                <p>
-                    Government forms, certificates
-                    and online application assistance.
-                </p>
-                <span class="tag">Online</span>
-            </div>
-
-            <div class="card reveal">
-                <div class="icon">💬</div>
-                <h3>Free Consultation</h3>
-                <p>
-                    WhatsApp us and understand
-                    the process before starting.
-                </p>
-                <span class="tag">WhatsApp</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-    <div class="container reveal">
-
-        <div class="section-title">
-
-            <div class="eyebrow">
-                Get In Touch
-            </div>
-
-            <h2>
-                Contact Us
-            </h2>
-
-            <p>
-                Have a question? Contact us directly.
-            </p>
-
-        </div>
-
-        <div class="contact-box">
-
-            <a
-                href="https://wa.me/919322235132"
-                class="whatsapp">
-                💬 WhatsApp: 9322235132
-            </a>
-
-            <a
-                href="tel:9322235132"
-                class="contact-link">
-                📞 Call: +91 9322235132
-            </a>
-
-            <a
-                href="mailto:ombhalekar76@gmail.com"
-                class="email">
-                📧 ombhalekar76@gmail.com
-            </a>
-
-            <hr style="margin:20px 0;border:0;border-top:1px solid #e2e8f0">
-
-            <p class="note">
-                Note: ₹700 is the service charge.
-                Government charges are separate.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 OM ONLINE SERVICES |
-    omonlineservices.in
-</footer>
-
-<!-- TOP -->
-<button id="topBtn">
-    ↑
-</button>
-
-<!-- WHATSAPP -->
-<a
-    href="https://wa.me/919322235132"
-    class="whatsapp-float">
-    💬
-</a>
-
-<script>
-
-/* LOADER */
-window.addEventListener("load",function(){
-
-    setTimeout(function(){
-        document
-        .getElementById("loader")
-        .classList.add("hide");
-    },500);
-
-});
-
-/* MOBILE MENU */
-const menuBtn =
-document.getElementById("menuBtn");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuBtn.addEventListener("click",function(){
-
-    navLinks.classList.toggle("open");
-
-});
-
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
-
-    link.addEventListener("click",function(){
-        navLinks.classList.remove("open");
-    });
-
-});
-
-/* SCROLL REVEAL */
-const observer =
-new IntersectionObserver(function(entries){
-
-    entries.forEach(function(entry){
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("active");
-
-            observer.unobserve(entry.target);
-
-        }
-
-    });
-
-},{
-    threshold:.12
-});
-
-document
-.querySelectorAll(".reveal")
-.forEach(function(element){
-
-    observer.observe(element);
-
-});
-
-/* TOP BUTTON */
-const topBtn =
-document.getElementById("topBtn");
-
-window.addEventListener("scroll",function(){
-
-    if(window.scrollY > 500){
-
-        topBtn.classList.add("show");
-
-    }else{
-
-        topBtn.classList.remove("show");
-
-    }
-
-});
-
-topBtn.addEventListener("click",function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-
-</script>
-
-</body>
-</html>
